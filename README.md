@@ -33,9 +33,9 @@ address={"6A:08:AA:C2":"192.168.1.100","8A:BC:E3:FA":"192.168.1.99"};
 while True:
  ip=c.recv(1024).decode()
  try:
- c.send(address[ip].encode())
+   c.send(address[ip].encode())
  except KeyError:
- c.send("Not Found".encode()) 
+   c.send("Not Found".encode()) 
 ```
 
 # SERVER :
